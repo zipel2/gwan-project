@@ -1,11 +1,11 @@
-package org.nhnnext.repository;
+package org.nhnnext.support;
 
 import java.io.File;
 
 import org.springframework.web.multipart.MultipartFile;
 
 public class FileUploader {
-	private static final String ATTACHMENT_ROOT_DIR = "/Users/dugong/Documents/workspace/next-board/webapp/images";
+	private static final String ATTACHMENT_ROOT_DIR = "/Users/dugong/git/gwan-project/webapp/images";
 
 	public static String upload(MultipartFile multipartFile) {
 		if (multipartFile.isEmpty()) {
