@@ -1,14 +1,23 @@
 package org.nhnnext.web;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 @Entity
 public class Board {
+	@OneToMany(mappedBy = "board", fetch = FetchType.EAGER)
+    private List<Comment> comments;
+	public List<Comment> getComments() { return comments;
+
+	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -57,4 +66,6 @@ public class Board {
 	public String toString() {
 		return "Board [title=" + title + ", contents=" + contents + "]";
 	}
+	
+
 }

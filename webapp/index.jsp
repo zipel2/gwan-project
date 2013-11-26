@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="/board/form">글쓰기</a>
+	<center><h1><a href="/board/form">하루 하나 </a></h1><img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-prn2/1378699_708376339191311_1106343319_n.jpg"  width="610" alt="Daily Onething"/></center>
+
+	 
 </body>
 </html>
+
+
+
+<!--	-->

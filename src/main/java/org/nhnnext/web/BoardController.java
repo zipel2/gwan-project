@@ -10,13 +10,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
-@Controller
+@Controller	
 @RequestMapping("/board")
-
 public class BoardController {
 	@Autowired
 	private BoardRepository boardRepository;
 	
+	@RequestMapping("/board")
+    public String list(Model model) {
+		model.addAttribute("boards", boardRepository.findAll());
+        return "list";
+    } 
     @RequestMapping("/form")
     public String form() {
         return "form";    
